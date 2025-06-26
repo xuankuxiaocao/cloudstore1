@@ -1,8 +1,6 @@
-# Kama-HTTPServer
-【代码随想录知识星球】项目分享：Kama-HTTPServer
 
->⭐️ 本项目为[【代码随想录知识星球】](https://programmercarl.com/other/kstar.html) 教学项目  
->⭐️ 在 [HTTP服务框架文档](https://www.programmercarl.com/other/project_http.html) 里详细讲解：项目前置知识 + 项目细节 + 代码解读 + 项目难点 + 面试题与回答 + 简历写法 + 项目拓展。 全面帮助你用这个项目求职面试！
+
+# Kama-HTTPServer
 ## 项目介绍
 本项目是基于C++实现自定义的 HttpServer 框架，该项目包括 HTTP/HTTPS 支持、动态路由处理、会话管理等功能。并基于该框架开发了一个简易的五子棋在线对战游戏，包含登录注册、菜单选择、人机对战等功能。
 ### HTTP框架目录结构
@@ -127,20 +125,6 @@ make clean
 ```
 sudo ./simple_server
 ```  
-
-## 运行结果
-> 程序运行起来后，到浏览器访问自己对应的 ip:端口号  
-
-登录界面  
-![登录界面](images/image1.jpg)
-菜单界面  
-> 匹配玩家和退出游戏待开发中。。。 </br>
-
-![菜单界面](images/image2.jpg)
-对战AI  
-> 人机对战目前只是用于demo测试，AI很弱智，待完善。。。  
-
-![菜单界面](images/image3.jpg) 
 
 ## 总结
 - HttpServer是一个基于C++的高性能HTTP服务器框架，旨在简化Web应用的开发与部署。

@@ -28,7 +28,7 @@ public:
     void resetDefaultFile()
     {
         file_.close();
-        file_.open("/Gomoku/GomokuServer/resource/NotFound.html", std::ios::binary);
+        file_.open("/root/cjw/cjw-HTTPServer/WebApps/CloudStoreServer/resource/NotFound.html", std::ios::binary);
     }
 
     uint64_t size()

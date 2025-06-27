@@ -152,6 +152,21 @@
                 <label for="register-username">用户名</label>
                 <input type="text" id="register-username" placeholder="请输入用户名" required>
             </div>
+            <!-- 添加用户昵称输入框 -->
+            <div class="form-group">
+                <label for="register-nickname">用户昵称</label>
+                <input type="text" id="register-nickname" placeholder="请输入用户昵称" required>
+            </div>
+            <!-- 添加手机号码输入框 -->
+            <div class="form-group">
+                <label for="register-phone">手机号码</label>
+                <input type="tel" id="register-phone" placeholder="请输入手机号码" required>
+            </div>
+            <!-- 添加邮箱输入框 -->
+            <div class="form-group">
+                <label for="register-email">邮箱</label>
+                <input type="email" id="register-email" placeholder="请输入邮箱" required>
+            </div>
             <div class="form-group">
                 <label for="register-password">密码</label>
                 <input type="password" id="register-password" placeholder="请输入密码" required>
@@ -240,20 +255,29 @@
         // 注册表单提交
         document.getElementById('register-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            const username = document.getElementById('register-username').value;
+            const user_name = document.getElementById('register-username').value;
+            const nick_name = document.getElementById('register-nickname').value;
+            const phone = document.getElementById('register-phone').value;
+            const email = document.getElementById('register-email').value;
             const password = document.getElementById('register-password').value;
-
+            // 添加用户昵称到注册请求
             fetch('/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password })
+                body: JSON.stringify({
+                    user_name,
+                    nick_name,
+                    phone,
+                    email,
+                    password
+                })
             })
                 .then(response => {
                     if (response.status === 200) {
                         showAlert('注册成功！');
 
                         // 将注册的用户名和密码填充到登录输入框
-                        document.getElementById('login-username').value = username;
+                        document.getElementById('login-username').value = user_name;
                         document.getElementById('login-password').value = password;
 
                         setTimeout(showLogin, 1000); // 1秒后回到登录界面

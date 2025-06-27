@@ -31,7 +31,7 @@ void CloudStoreServer::start()
 void CloudStoreServer::initialize()
 {
     // 初始化数据库连接池
-    http::MysqlUtil::init("tcp://127.0.0.1:3306", "root", "root", "Gomoku", 10);
+    http::MysqlUtil::init("tcp://127.0.0.1:3306", "root", "root", "cloudstore", 10);
     // 初始化会话
     initializeSession();
     // 初始化中间件

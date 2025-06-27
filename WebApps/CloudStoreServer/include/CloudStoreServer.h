@@ -130,7 +130,7 @@ private:
     //std::mutex                                       mutexForAiGames_;
     // userId -> 是否在游戏中
     std::unordered_map<int, bool>                    onlineUsers_;
-    //std::mutex                                       mutexForOnlineUsers_; 
+    std::mutex                                       mutexForOnlineUsers_; 
     // 最高在线人数
     std::atomic<int>                                 maxOnline_;
 };

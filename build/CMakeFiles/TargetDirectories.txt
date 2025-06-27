@@ -1,3 +1,0 @@
-/root/cjw/cjw-HTTPServer/build/CMakeFiles/simple_server.dir
-/root/cjw/cjw-HTTPServer/build/CMakeFiles/edit_cache.dir
-/root/cjw/cjw-HTTPServer/build/CMakeFiles/rebuild_cache.dir

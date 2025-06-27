@@ -113,7 +113,7 @@ int LoginHandler::queryUserId(const std::string &username, const std::string &pa
 {
     // 前端用户传来账号密码，查找数据库是否有该账号密码
     // 使用预处理语句, 防止sql注入
-    std::string sql = "SELECT id FROM users WHERE username = ? AND password = ?";
+    std::string sql = "SELECT id FROM user WHERE user_name = ? AND password = ?";
     // std::vector<std::string> params = {username, password};
     sql::ResultSet* res = mysqlUtil_.executeQuery(sql, username, password);
     if (res->next())
